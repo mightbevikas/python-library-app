@@ -8,6 +8,9 @@ services:
       - "3306:3306"
     networks:
       - mynetwork
+    placement:
+      constraints:
+        - node.hostname == Manager
 
   auth_service:
     image: shaikmustafa/arshad:auth
