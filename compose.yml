@@ -5,8 +5,8 @@ services:
     deploy:
       replicas: 1
       placement:
-      constraints:
-        - node.hostname == Manager
+        constraints:
+          - node.hostname == Manager
     ports:
       - "3306:3306"
     networks:
